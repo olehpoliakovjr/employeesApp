@@ -7,6 +7,13 @@ import EmployeesList from "../employees-list/employees-list.jsx";
 import EmployeesAddForm from "../employees-add-form/employees-add-form.jsx";
 
 function App () {
+
+    const dataBase = [
+        {name: "Oleg P.", salary: 2500, increase: true, id:1},
+        {name: "John M.", salary: 1450, increase: true, id:2},
+        {name: "Jack J.", salary: 970, increase: false, id:3},
+    ];
+
     return (
         <div className="app">
             <AppInfo/>
@@ -16,7 +23,7 @@ function App () {
                 <AppFilter/>
             </div>
 
-            <EmployeesList/>
+            <EmployeesList data={dataBase}/>
 
             <EmployeesAddForm/>
 
